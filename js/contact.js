@@ -10,13 +10,15 @@ function message(){
     var textfield = document.getElementsByTagName("textarea");
     // var country = document.getElementsByTagName("");
     // var question = document.getElementsByTagName("option");
-    const success = document.getElementById("success");
-    const failed = document.getElementById("failed");
+    var success = document.getElementById("toast-msg");
+
+    var failed = success.innerHTML = "Complete all fields";
 
 
 
     if (fname.value === "" || lname.value === "" || email.value === "" || num.value === "") {
-        failed.style.display = 'block';
+        // failed.style.display = 'block';
+        
     }
     else {
         setTimeout(() => {

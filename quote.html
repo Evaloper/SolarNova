@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Solartec - Renewable Energy Website Template</title>
+    <title>SOLARNOVA - Renewable Energy For All</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="./img/favicon-32x32.png" sizes="" type="image/png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +30,139 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+
+        /* calculator styling starts */
+        body{
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
+        #calc_table{ 
+            border: none;
+            padding: 20px 100px;
+        }
+        .calc_btn{
+            background-color: #024697;
+            border: none;
+            height: 36px;
+            width: 50px;
+            font-weight: bold;
+            border-radius: 3px;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .calc_btn:hover{
+           background-color: #02254e;
+        }
+
+        .calc_btn:active{
+            opacity: 0.7;
+        }
+
+        
+        .calculate_btn{
+           text-align: center; 
+        }
+        .call_btn{
+            height: 40px;
+            width: 300px;
+            background-color: #024697;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 20px; 
+            margin-bottom: 150px; 
+        }
+        .call_btn:hover{
+        background-color: #02254e;
+         }
+
+         .call_btn:active{
+            opacity: 0.7;
+         }
+         
+        .app {
+            text-align: right;
+           
+        }
+
+        .wattage{
+            padding: 2px;
+           
+        }
+        thead{
+            text-align: end;
+            margin-left: 50px;
+            padding: 20px;
+        }
+         
+
+         /* calculator styling ends */
+         
+
+        
+           
+         
+        /* footer cta styling starts */
+         .calc_calc h4{
+             text-transform: uppercase;
+             font-size: 15px;  
+
+         }
+
+         .calc_calc{
+              padding:10px 5px;
+          }
+
+         .container_calc{
+             position: relative;
+            border: 3px solid #ef800d;
+             border-radius: 25px;
+            padding: 10px 0;
+            margin: 20px auto;   
+            width: 50vw;
+            align-self: center;
+            z-index: 2;
+             margin-bottom: -130px;
+            text-align: center;
+            background-color: #f5f6f7;
+            
+         }
+
+         
+        .plan_btn{
+            height: 40px;
+            width: 150px;
+            background-color: #024697;
+            color: #fff; 
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            
+              
+        }
+        .plan_btn:hover{
+        background-color: #02254e;
+         }
+
+         .plan_btn:active{
+            opacity: 0.7;
+         }
+
+         /* footer cta styling ends */
+
+         
+    </style>
+    
 </head>
 
 <body>
@@ -46,7 +179,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
-           <img class="logo" src="./img/SOLARNOVA (1).svg" alt="logo" width="200px"> 
+           <img class="logo" src="./img/SOLARNOVA (1).svg" alt="logo" width="200px"  > 
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -54,16 +187,11 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.html" class="nav-item nav-link active">Home</a>
-                
                 <a href="products.html" class="nav-item nav-link">Products</a>
                 <a href="blog.html" class="nav-item nav-link">Blog</a>
-                <div class="nav-item dropdown">
-            
-                </div>
                 <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div>
-            <a href="" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Calculate Load<i class="fa fa-arrow-right ms-3"></i></a>
+              </div>
+            <a href="quote.html" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Calculate Load<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -72,118 +200,380 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5">
         <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">Free Quote</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-white active" aria-current="page">Free Quote</li>
-                </ol>
-            </nav>
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Load Calculator</h1>
+            
         </div>
     </div>
     <!-- Page Header End -->
 
+    
 
-    <!-- Quote Start -->
-    <div class="container-fluid bg-light overflow-hidden px-lg-0" style="margin: 6rem 0;">
-        <div class="container quote px-lg-0">
-            <div class="row g-0 mx-lg-0">
-                <div class="col-lg-6 ps-lg-0 wow fadeIn" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/quote.jpg" style="object-fit: cover;" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6 quote-text py-5 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="p-lg-5 pe-lg-0">
-                        <h6 class="text-primary">Free Quote</h6>
-                        <h1 class="mb-4">Get A Free Quote</h1>
-                        <p class="mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Mobile" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <select class="form-select border-0" style="height: 55px;">
-                                        <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 2</option>
-                                        <option value="3">Service 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control border-0" placeholder="Special Note"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Submit</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+    <!-- Load calculator Start -->
+    <div class="row g-4" id="calc_table">
+        <div class="col-lg-4 col-md-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td class="app" >Appliances</td>
+                         <td class="wattage">Watts</td>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Washing machine</td>
+                        <td class="watt">4000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Microwave oven</td>
+                        <td class="watt">1000</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Freezer</td>
+                        <td class="watt">79</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Coffee maker</td>
+                        <td class="watt">1050</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Toaster</td>
+                        <td class="watt">1250</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Game console</td>
+                        <td class="watt">135</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">20" flatscreen tv</td>
+                        <td class="watt">25</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">30" flatscreen tv</td>
+                        <td class="watt">35</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">40" flatscreen tv</td>
+                        <td class="watt">60</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td class="app">Appliances</td>
+                         <td class="wattage">Watts</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Tube light</td>
+                    
+                        <td class="watt">18</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Fan</td>
+                        <td class="watt">70</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Music system</td>
+                        <td class="watt">320</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Washing Machine</td>
+                        <td class="watt">4000</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Washing Machine</td>
+                        <td class="watt">4000</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Washing Machine</td>
+                        <td class="watt">4000</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Washing Machine</td>
+                        <td class="watt">4000</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Washing Machine</td>
+                        <td class="watt">4000</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Washing Machine</td>
+                        <td class="watt">4000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td class="app">Appliances</td>
+                         <td class="wattage">Watts</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Washing Machine</td>
+                        <td class="watt">4000</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Washing Machine</td>
+                        <td class="watt">4000</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Washing Machine</td>
+                        <td class="watt">4000</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Washing Machine</td>
+                        <td class="watt">4000</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Washing Machine</td>
+                        <td class="watt">4000</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Washing Machine</td>
+                        <td class="watt">4000</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Washing Machine</td>
+                        <td class="watt">4000</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Washing Machine</td>
+                        <td class="watt">4000</td>
+                    </tr>
+                   <tr>
+                        <td>
+                            <button class="calc_btn">+</button>
+                        </td><td>
+                            <button class="calc_btn">-</button>
+                        </td>
+                        <td class="appliance">Washing Machine</td>
+                        <td class="watt">4000</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
-    <!-- Quote End -->
+
+    <div class="calculate_btn">
+        <button class="call_btn">
+            Calculate Load
+        </button>
+    </div>
+
+    
+
+        
+       
+        
+    
+   
+    
+    <!-- Load calculator End -->
         
 
     <!-- Footer Start -->
+        <div class="container_calc">
+            <div class="calc_calc">
+                <h4>Need to know what solar solution would fit your electricity needs? </h4>
+                <p>Use our electrical load calculator to find the best system for you</p>
+                <a href="financing.html">
+                    <button class="plan_btn">CALCULATE LOAD</button>
+                </a>
+            </div>
+        </div>
+
+
     <div class="container-fluid bg-dark text-body footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
+        <div class="container py-5" style="margin-top: 50px;">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">Address</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p class="mb-2" style="color: #ef800d;"><i class="fa fa-map-marker-alt me-3" style="color: #ef800d;"></i>123 Sahara Desert, Africa</p>
+                    <p class="mb-2" style="color: #ef800d;"><i class="fa fa-phone-alt me-3" style="color: #ef800d;"></i>+012 345 67890</p>
+                    <p class="mb-2" style="color: #ef800d;"><i class="fa fa-envelope me-3" style="color: #ef800d;"></i>solarnova@wt.com</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-twitter" style="color: #ef800d;"></i></a>
+                        <a class="btn btn-square btn-outline-light btn-social" href="" style="color: #ef800d;"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light btn-social" href="" style="color: #ef800d;"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-light btn-social" href="" style="color: #ef800d;"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
+                    <a class="btn btn-link" href="index.html" >Home</a>
+                    <a class="btn btn-link" href="about.html" >About Us</a>
+                    <a class="btn btn-link" href="#">Contact Us</a>
+                    <a class="btn btn-link" href="products.html">Our Products</a>
+                    <a class="btn btn-link" href="quote.html">Calculate Load</a>
+                    <a class="btn btn-link" href="blog.html">Blog</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Project Gallery</h5>
+                    <h5 class="text-white mb-4">Product Gallery</h5>
                     <div class="row g-2">
                         <div class="col-4">
-                            <img class="img-fluid rounded" src="img/gallery-1.jpg" alt="">
+                            <img class="img-fluid rounded" src="./img/500-liter-ETC-solar-water-heater.jpg" alt="" width="100px">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid rounded" src="img/gallery-2.jpg" alt="">
+                            <img class="img-fluid rounded" src="./img/img-4.jpg" width="120px" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid rounded" src="img/gallery-3.jpg" alt="">
+                            <img class="img-fluid rounded" src="img/water irrigation 1.jpg" width="100px" alt="">
                         </div>
                         <div class="col-4">
                             <img class="img-fluid rounded" src="img/gallery-4.jpg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid rounded" src="img/gallery-5.jpg" alt="">
+                            <img class="img-fluid rounded" src="img/img-9.jpg" alt="" width="120px">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid rounded" src="img/gallery-6.jpg" alt="">
+                            <img class="img-fluid rounded" src="img/img-13.jpeg" alt="" width="100px">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">Newsletter</h5>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <p style="color: #ef800d;">Sign up for updates about solar energy.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                         <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
@@ -194,17 +584,18 @@
         <div class="container">
             <div class="copyright">
                 <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#">Your Site Name</a>, All Right Reserved.
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0" style="margin-left: 35%;">
+                        &copy; <a href="#">2022 Technocrats</a> | All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                        <br>Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                        <!-- Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+                        <br>Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a> -->
                     </div>
                 </div>
             </div>
         </div>
+        
     </div>
     <!-- Footer End -->
 

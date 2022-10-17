@@ -78,14 +78,9 @@
 }
 
 /*** Navbar ***/
-
-.logo{
-    margin-top: 20px;
-}
-
 .navbar.sticky-top {
     top: -100px;
-    transition: .5s;
+transition: .5s;
 }
 
 .navbar .navbar-brand,
@@ -217,7 +212,7 @@
 }
 
 .page-header {
-    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(../img/blog1.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -420,7 +415,7 @@
     left: 0;
     height: 100%;
     width: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, rgb(235, 237, 245) 0%, rgba(255, 255, 255, 0) 100%);
     z-index: 1;
 }
 
@@ -431,7 +426,7 @@
     right: 0;
     height: 100%;
     width: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: inear-gradientl(to left, rgb(245, 245, 248) 0%, rgba(255, 255, 255, 0) 100%);
     z-index: 1;
 }
 
@@ -535,6 +530,7 @@
     border: 1px solid #9B9B9B;
     border-radius: 38px;
     transition: .3s;
+    
 }
 
 .footer .btn.btn-social:hover {
@@ -551,6 +547,7 @@
     font-weight: normal;
     text-transform: capitalize;
     transition: .3s;
+    color: #ef800d;
 }
 
 .footer .btn.btn-link::before {
@@ -559,6 +556,7 @@
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     margin-right: 10px;
+    
 }
 
 .footer .btn.btn-link:hover {
@@ -578,4 +576,8 @@
 
 .footer .copyright a:hover {
     color: var(--primary);
+}
+
+.logo{
+    margin-top: 20px;
 }

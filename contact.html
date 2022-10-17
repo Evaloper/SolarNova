@@ -93,16 +93,16 @@
         <div class="form">
             <form>
                 <div class="fullname">
-                    <input type="text" placeholder="First name" class="input right-input" id="fname" required>
-                    <input type="text" placeholder="Last name" class="input left-input" id="lname" required>
+                    <input type="text" placeholder="First name" class="input right-input field" id="fname" required>
+                    <input type="text" placeholder="Last name" class="input left-input field" id="lname" required>
                 </div>
                 <div class="address">
-                    <input type="email" placeholder="Email" class="input right-input" id="email" required>
-                    <input type="tel" placeholder="Phone number" class="input left-input" id="num" required>
+                    <input type="email" placeholder="Email" class="input right-input field" id="email" required>
+                    <input type="tel" placeholder="Phone number" class="input left-input field" id="num" required>
                 </div>
                 <div>
-                    <select name="state" class="select right-input" title=" country" required>
-                        <option value="" class="select-value">Select value</option>
+                    <select name="state" class="select right-input field" id="country" title=" country" required>
+                        <option value="" class="select-value field" id="selectValue" >Select value</option>
                         <option value="Benin Republic">Benin Republic</option>
                         <option value="Ethiopia">Ethiopia</option>
                         <option value="Cameroon">Cameroon</option>
@@ -115,8 +115,8 @@
                         <option value="Sudan">Sudan</option>
                         <option value="Uganda">Uganda</option>
                     </select>
-                    <select name="state" class="select left-input" title="state" required>
-                        <option value="" class="select-value">How did you hear about us?</option>
+                    <select name="state" class="select left-input field" title="state" required>
+                        <option value="" class="select-value field">How did you hear about us?</option>
                         <option value="Facebook">Facebook</option>
                         <option value="Youtube">Youtube</option>
                         <option value="Instagram">Instagram</option>
@@ -127,10 +127,10 @@
                     
                 </div>
                 <div class="textarea">
-                    <textarea name="" id="" cols="40" rows="5" placeholder="How Can we be of help?" id="text" ></textarea>
+                    <textarea class="field" name="" id="" cols="40" rows="5" placeholder="How Can we be of help?" id="text" ></textarea>
                 </div>
                 <div class="button">
-                   <button id="submitButton" type="button" value="Send Message" onclick="message()">Send Message</button> 
+                   <button id="submit" type="button" value="Send Message" class="button" onclick="myFunction()">Send Message</button> 
                 </div>
                 <div class="alert">
                     <div id="toast-msg">Successfully Sent!</div>
@@ -249,7 +249,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script src="js/contact.s"></script>
+    <script src="js/contact.js"></script>
 </body>
 
 </html>
